@@ -1,0 +1,925 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 14px;
+    --text-color:white;
+    --text-color-2:black;
+    --background:#333333;
+    --hover-text:#c89979;
+    --border-bottom:#484848;
+    --bachground-item:#c89979;
+    --border-product: rgb(0 0 0 / 30%);
+    --heart-hover:red;
+    --color-face:#3a589d;
+    --color-insta:#3b6994;
+    --color-twitter: #2478ba;
+    --color-wifi: #fc7600;
+    --color-linked: #0072b7;
+    --color-border-bottem-main-left: #f4f4f4;
+    --color-text-main-tittle: #9494a5;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+.row{
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.row1{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.row2{
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+ /* làm phần header  */
+ header{
+     width: 100%;
+ }
+ /* làm phần header-1 */
+ .header-1{
+     width: 100%;
+     background-color: var(--background);
+     border-bottom: 1px solid var(--border-bottom);
+ }
+ .header-1-s{
+     width: 100%;
+     height: 40px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 15px;
+ }
+.header-1-item-1{
+    display: flex;
+}
+.header-1-item-text-1{
+    margin-left: 25px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+.header-1-item-text-1 .icon{
+    margin-right: 10px;
+}
+.header-1-item-text-link{
+    color: var(--text-color);
+}
+.header-1-item-text-link:hover{
+    color: var(--hover-text);
+}
+.header-1-item-text-2{
+    margin-right: 10px;
+}
+
+/* làm phần header-2 */
+.header-2{
+    width: 100%;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border-bottom);
+}
+.header-2-s{
+    width: 100%;
+    height: 100px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-2-logo{
+    width: 30%;
+}
+.header-2-logo img{
+    max-width: 50%;
+    min-width: 120px;
+}
+.header-2-search{
+    width: 50%;
+    display: flex;
+    position: relative;
+}
+.header-2-search input{
+    width: 60%;
+    height: 40px;
+    padding: 10px;
+    outline: none;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border: none
+}
+.header-2-search button{
+    width: 10%;
+    height: 40px;
+    border: none;
+    background-color: var(--bachground-item);
+    border-top-right-radius: 7px;
+    border-bottom-right-radius:7px;
+    cursor: pointer;
+    outline: none;
+}
+.header-2-search button i{
+    color: var(--text-color-2);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.header-2-right{
+    display: flex;
+    justify-content: space-between;
+}
+.header-2-right-text{
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-right: 7px;
+}
+.header-2-right-text a{
+    color: var(--text-color);
+}
+.header-2-right-cart{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+    margin-left: 15px;
+    position: relative;
+}
+.header-2-right-cart::after{
+    content: "";
+    display: block;
+    width: 70%;
+    height: 8px;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid var(--text-color);
+    border-top-left-radius: 99px;
+    border-top-right-radius: 99px;
+    border-bottom: 0;
+}
+.header-2-right-cart:hover::after{
+    height: 10px;
+}
+.header-2-right-cart span{
+    display: flex;
+    justify-content: center;
+}
+
+/* làm phần header-3 */
+.header-3{
+    width: 100%;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border-bottom);
+    position: sticky;
+}
+.header-3-s{
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    flex: 1;
+    text-align: center;
+}
+.header-3-list-item{
+    display: inline-block;
+    padding: 0 30px;
+    font-size: 1rem;
+}
+.header-3-list-item a{
+    color: var(--text-color);
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.header-3-list .active a{
+    color: var(--hover-text);
+}
+.header-3-list .active a::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 120%;
+    width: 100%;
+    border: 1px solid var(--hover-text);
+}
+.header-3-list-item a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 120%;
+    width: 0px;
+    transition: 1s;
+}
+.header-3-list-item a:hover::after{
+    width: 100%;
+    border: 1px solid var(--hover-text);
+    transition: 1s;
+}
+/* chỗ css cho thanh tìm kiếm ở menu khi responsive */
+.header-3-list-item-mobile{
+    display: none;
+}
+/* làm phần menu dính trên đỉnh đầu web khi scroll */
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background-color: red;
+}
+.header-icon-responsive{
+    display: none;
+    position: relative;
+}
+.header-icon-responsive i{
+    font-size: 3rem;
+    margin: 0 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#toggle-menu{
+    display: none;
+}
+
+
+
+/* làm phần main */
+.main{}
+.main-tittle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+.main-tittle-left-text{
+    font-size: 1.4rem;
+    color: var(--color-text-main-tittle);
+    font-weight: 400;
+}
+.main-tittle-left-text span{
+    margin: 0 5px;
+}
+.main-tittle-left-text-active{
+   color: var(--text-color-2);
+}
+
+
+.main-tittle-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-tittle-right-text-responsive{
+    justify-content: space-between;
+    align-items: center;
+    width: 50px;
+    display: none;
+}
+.main-tittle-right-text-responsive label i{
+    font-size: 2rem;
+    margin-right: 10px;
+}
+.main-tittle-right-text-responsive h2{
+    font-size: 1.2rem;
+} 
+
+.main-tittle-right-text{
+    font-size: 1.2rem;
+    font-weight: 400;
+
+}
+#main-tittle-right-choose{
+    margin: 0 10px;
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+
+/* làm phần main chính */
+.main-middle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-product);
+}
+/* làm phần main chính bên trái  */
+.main-middle-left{
+    flex-basis: 25%;
+}
+.main-middle-left-item{
+    width: 90%;
+    margin: 25px auto;
+}
+.main-middle-left-item-tittle{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.main-middle-left-item-list{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-product);
+}
+.main-middle-left-item-list ul li{
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid var(--color-border-bottem-main-left);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-middle-left-item-list ul li a{
+    color: var(--text-color-2);
+}
+.main-middle-left-item-list-dropmenu{
+    width: 85%;
+    margin: 10px auto;
+    border: 1px solid var(--border-product);
+}
+
+.main-middle-left-item-list-item{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px;
+    border-bottom: 1px solid var(--color-border-bottem-main-left);
+    margin: 20px 0;
+    overflow: hidden;
+}
+.main-middle-left-item-list-item-logo{
+    flex-basis: 30%;
+    overflow: hidden;
+    transition: 0.6s;
+}
+.main-middle-left-item-list-item-logo img{
+    width: 100%;
+    overflow: hidden;
+    transition: 0.6s;
+}
+.main-middle-left-item-list-item-logo img:hover{
+    transform: scale(1.5);
+}
+.main-middle-left-item-list-item-text{
+    flex-basis: 65%;
+}
+.main-middle-left-item-list-item-text-tittle{
+    font-weight: 400;
+    margin-bottom: 40px;
+    font-size: 1rem;
+}
+.main-middle-left-item-list-item-text-price{
+    font-weight: bold;
+    font-size: 1rem;
+}
+.main-middle-left-item-list-item-logo-new{
+    border-radius: 50%;
+}
+.main-middle-left-item-list-item-text-tittle-new{
+    margin: 0;
+}
+.main-middle-left-item-list-item-text-tittle-new a{
+    color: var(--text-color-2);
+}
+/* làm phần main chính bên phải  */
+.main-middle-right{
+    flex-basis: 70%;
+}
+.main-middle-right-item{
+    flex-basis: 25%;
+    margin: 15px 0;
+    min-width: 200px;
+    transition: 0.6s linear;
+    padding: 5px;
+}
+.main-middle-right-item-img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 1;
+}
+.main-middle-right-item-img img{
+    max-width: 100%;
+}
+.main-middle-right-item-img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.4s linear;
+}
+.main-middle-right-item:hover .main-middle-right-item-img-overlay{
+    opacity: 1;
+}
+.main-middle-right-item:hover{
+    box-shadow: 0px 0px 12px 6px gray ;
+}
+.main-middle-right-item-text-tittle{
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+}
+.main-middle-right-item-text-price{
+    width: 100%;
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--hover-text);
+    font-weight: 700;
+    margin: 15px 0;
+}
+.main-middle-right-item-text-btn-buy{
+    display: block;
+    width: 70%;
+    margin: auto;
+    padding:  10px 17px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    background-color: var(--bachground-item);
+    border: none;
+}
+
+/* hết phần làm main chính */
+/* làm phần main-7 */
+.main-7{
+    margin: 10px 0;
+}
+.main-7-s{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap
+}
+.main-7-tittle{
+    width: 500px;
+}
+.main-7-tittle h2{
+    font-size: 1.9rem;
+}
+.main-7-search{
+   width: 40%;
+   display: flex;
+   justify-content: flex-end;
+}
+.main-7-search input{
+    width: 70%;
+    height: 40px;
+    padding: 0 11px;
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+    font-size: 1.1rem;
+}
+.main-7-search button{
+    width: 25%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: #c89979;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.main-7-search button:hover{
+    background-color: var(--heart-hover);
+    transition: 0.6s;
+}
+/* hết làm phần main */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* làm phần footer */
+footer{
+    width: 100%;
+    background-color: var(--background);
+    padding: 35px 0;
+}
+.footer-s{
+    width: 100%;
+}
+.footer-item{
+    flex-basis: 20%;
+    height: 300px;
+    min-width: 200px;
+    margin: 10px;
+}
+.footer-item-tittle{
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+.footer-item-list-item{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+.footer-item-list-item-icon{
+    width: 10%;
+    margin: 0 15px;
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+.footer-item-list-item-text{
+    width: 89%;
+}
+.footer-item-list-item-text p a{
+    transition: 0.5s;
+    color: var(--text-color);
+}
+
+.footer-active{
+    color: var(--hover-text) !important;
+}
+.footer-item-list-item-text p a:hover
+{
+    color: var(--hover-text);
+    transition: 0.5s;
+}
+.footer-item-icon{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-item-icon-item{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-item-icon-item-face{
+    background-color: var(--color-face);
+    border: 1px solid var(--color-face);
+}
+.footer-item-icon-item-insta{
+    background-color: var(--color-insta);
+    border: 1px solid var(--color-insta);
+}
+.footer-item-icon-item-twitter{
+    background-color: var(--color-twitter);
+    border: 1px solid var(--color-twitter);
+}
+.footer-item-icon-item-wifi{
+    background-color: var(--color-wifi);
+    border: 1px solid var(--color-wifi);
+}
+.footer-item-icon-item-linked{
+    background-color: var(--color-linked);
+    border: 1px solid var(--color-linked);
+}
+.footer-item-icon-item a i{
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+.footer-item-list-item-img{
+    max-width: 100%;
+}
+/* phần làm tên bản quyền ở footer  */
+.footer-banquyen{
+    border-top: 1px solid var(--border-product);
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.footer-banquyen:hover{
+    color: var(--hover-text);
+    transition: 0.5s ease-in-out;
+}
+
+/* cái input này làm để trung giản phần hiển thị main-middle-left khi responsive */
+#main-middle-left-toggle{
+    display: none;
+}
+/* phần làm dấu chữ X khi mà main-middle-left hiện ra ở phần responsive */
+.main-tittle-right-text-responsive-lable-exit{
+    display: none;
+}
+/* main-middle-modal là phần để phụ trợ cho main-middle-left khi responsive */
+.main-middle-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.377);
+    z-index: 99;
+    opacity: 0;
+    pointer-events: none;
+}
+/* câu lệnh pointer-events giúp cho khi opacity 0 mà chạm được mọi thứ ở bên ngoài */
+
+@media screen and (max-width: 850px) {
+    .header-icon-responsive{
+        display: block;
+        order: 1;
+    }
+    #header-icon2{
+        display: none;
+    }
+    .header-1{
+        display: none;
+    }
+    .header-2-search{
+        display: none;
+    }
+    .header-2{
+        width: 80%;
+        order: 2;
+    }
+    .header-2-logo{
+        width: 80%;
+    }
+    .header-2-logo img{
+        max-width: 50%;
+        display: block;
+        margin: auto;
+    }
+    .header-2-right-text{
+        display: none;
+    }
+    header{
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        justify-content: space-between;
+        background-color: var(--background);
+        padding: 0 15px;
+        width: 100vw;
+        z-index: 99;
+    }
+    .header-3{
+        display: block;
+        position: fixed;
+        top: 100px;
+        left: -100%;
+        height: 100%;
+        background-color: var(--background);
+        border: none;
+        transition: 1s;
+        z-index: 99;
+        width: 100%;
+    }
+    .header-3-s{
+        height: 100%;
+    }
+    .header-3-list{
+        height: 100%;
+        transition: 1s;
+        z-index: 99;
+        width: 100%;
+        overflow-y: auto;
+        padding-bottom: 200px;
+    }
+    .header-3-list-item{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     padding: 5px;
+     justify-content: center;
+     font-size: 1.2rem;
+    }
+    #toggle-menu:checked ~.header-3{
+        left: 0;
+        transition: 1s;
+    }
+    #toggle-menu:checked ~.header-icon-responsive #header-icon1{
+        display: none;
+    }
+    #toggle-menu:checked ~.header-icon-responsive #header-icon2{
+        display: block;
+    }
+    /* làm thanh tìm kiếm của header */
+    .header-3-list-item-mobile{
+        display: block;
+    }
+    .header-3-list-item-search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-3-list-item-search-input{
+        width: 50%;
+        height: 30px;
+        border: none;
+        padding: 0 10px;
+        font-size: 1.2rem;
+        outline: none;
+    }
+    .header-3-list-item-search-btn{
+        width: 15%;
+        height: 30px;
+        font-size: 1.3rem;
+        border: none;
+        color: var(--text-color);
+        background-color: var(--bachground-item);
+        outline: none;
+    }
+}
+/* làm phần responsive của main */
+@media screen and (max-width: 850px){
+    .main{
+        margin-top: 107px;
+    }
+    .main-tittle{
+        width: 100%;
+        flex-direction: column;
+    }
+    .main-tittle-left{
+        width: 100%;
+        margin: 15px 0;
+        text-align: center;
+    }
+    .main-tittle-right{
+        width: 100%;
+        flex-direction: column;
+    }
+    .main-tittle-right-text{
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin: 15px 0;
+        text-align: center;
+        display: none;
+    }
+    .main-tittle-right-text-responsive{
+        display: flex;
+        margin: 20px 0;
+    }
+    #main-tittle-right-choose{
+        width: 50%;
+        margin: 0;
+    }
+
+    /* làm phần main chính(main-middle) */
+    .main-middle-left{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 55%;
+        height: 100%;
+        overflow-y: auto;
+        padding-bottom: 300px;
+        z-index: 99;
+        background-color: var(--text-color);
+        transition: 0.6s linear;
+    }
+    .main-tittle-right-text-responsive-lable-exit{
+        display: block;
+        position: fixed;
+        top: 5px;
+        right: 20px;
+        z-index: 99;
+        font-size: 3rem;
+        color: var(--text-color);
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.6 linear;
+    }
+    #main-middle-left-toggle:checked ~.main-middle-left{
+        left: 0;
+    }
+    #main-middle-left-toggle:checked ~ .main-middle-modal{
+        transition: 1s linear;
+        opacity: 1;
+        pointer-events: auto;
+    }
+    #main-middle-left-toggle:checked ~ .main-tittle-right-text-responsive-lable-exit{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .main-middle-right{
+        flex-basis: 100%;
+    }
+    .main-middle-right-item{
+        flex-basis: 30%;
+    }
+}
+@media screen and (max-width: 615px){
+    .main-middle-left{
+        width: 70%;
+    }
+    .main-middle-right-item{
+        flex-basis: 47%;
+    }
+}
+@media screen and (max-width: 430px){
+    .main-middle-left{
+        width: 80%;
+    }
+    .main-middle-right-item{
+        flex-basis: 90%;
+        display: block;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 400px){
+    #main-tittle-right-choose{
+        width: 90%;
+    }
+}
+
+
+
+/* làm phần responsive của main-7 */
+@media screen and (max-width: 835px) {
+    .main-7-tittle{
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+    }
+    .main-7-search{
+        width: 100%;
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #main-7-search-btn{
+        font-size: 1.1rem;
+    }
+}
+/* làm phần responsive của footer */
+@media screen and (max-width: 900px) {
+    .footer-item{
+        flex-basis: 30%;
+    }
+    .footer-item-4{
+        display: block;
+        margin: auto;
+        margin-top: 25px;
+    }
+}
+@media screen and (max-width: 680px) {
+    .footer-item{
+        flex-basis: 45%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .footer-item{
+        flex-basis: 100%;
+    }
+    .footer-item-tittle{
+        width: 100%;
+        text-align: center;
+    }
+    .footer-item-list-item-text{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .footer-item-list-item-img{
+        display: block;
+        margin: auto;
+    }
+}
